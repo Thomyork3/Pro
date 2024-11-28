@@ -1,0 +1,165 @@
+/* styles.css */
+
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Container Styles */
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+table td a {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+
+table td a:hover {
+    background-color: #0056b3;
+}
+
+table td a:last-child {
+    background-color: #FF4136;
+}
+
+table td a:last-child:hover {
+    background-color: #e02a1e;
+}
+
+/* Below button container */
+.below {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+    }
+
+    form input[type="text"],
+    form input[type="number"],
+    form select {
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

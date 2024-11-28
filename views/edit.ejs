@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuario</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Conexión con el archivo CSS -->
+</head>
+<body>
+    <h1>Editar Usuario</h1>
+    <div class="container">
+        <form action="/edit/<%= user.id %>" method="POST">
+            <input type="text" id="nombre" name="nombre" value="<%= user.nombre %>" required>
+            <br>
+            <input type="text" id="apellidos" name="apellidos" value="<%= user.apellidos %>" required>
+            <br>
+            <input type="number" id="edad" name="edad" value="<%= user.edad %>" required>
+            <br>
+            <input type="text" id="telefono" name="telefono" value="<%= user.telefono %>">
+            <br>
+            <input type="text" id="nacionalidad" name="nacionalidad" value="<%= user.nacionalidad %>">
+            <br>
+            <select id="genero" name="genero" required>
+                <option value="" disabled selected>Género</option>
+                <option value="Masculino" <%= user.genero === "Masculino" ? "selected" : "" %>>Masculino</option>
+                <option value="Femenino" <%= user.genero === "Femenino" ? "selected" : "" %>>Femenino</option>
+                <option value="Otro" <%= user.genero === "Otro" ? "selected" : "" %>>Otro</option>
+            </select>
+            <br>
+            <input type="text" id="carrera" name="carrera" value="<%= user.carrera %>">
+            <br>
+            <div class="below">
+                <button type="submit">Actualizar</button>
+                <a href="/">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
