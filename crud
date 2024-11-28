@@ -1,0 +1,10 @@
+CREATE TABLE users (
+    ID INT AUTO_INCREMENT PRIMARY KEY, -- Columna ID como clave primaria y autoincrementable
+    nombre VARCHAR(50) NOT NULL,       -- Columna para el nombre
+    apellidos VARCHAR(100) NOT NULL,  -- Columna para los apellidos
+    edad INT NOT NULL,                -- Columna para la edad
+    genero VARCHAR(20) NOT NULL,       -- Columna para el género
+    carrera VARCHAR(100),             -- Columna para la carrera
+    telefono VARCHAR(15),             -- Columna para el teléfono
+    nacionalidad VARCHAR(50)          -- Columna para la nacionalidad
+);
